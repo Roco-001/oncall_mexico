@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% block title %}Guardia detallada{% endblock %}
+{% load static %}
+{% load thumbnail %}
+{% block content %}
+
+ <div class="container mt-3">
+    <div class="row">
+        <div class="col-12 ">
+            <h6 ><a href="javascript:history.back()" class="text-muted">
+                       <i class="bi bi-backspace-fill"></i> Regresar
+               </a>
+                </h6>
+             <h4 class="font-weight-bold text-center pb-4">{{object}} </h4>
+            {% for guardia in object_list %}
+            <div class="text-center">
+                <img src="{% thumbnail guardia.imagen 800x0  quality=100 %}" class="img-fluid my-1" alt="...">
+                </div>
+            <p class="font-weight-bold mt-3">
+                {{guardia.comentario}}
+            </p>
+
+             <p class="mt-3">
+                Quieres ver la matriz de Escalación <a  class="link-primary" href="{% url 'core:tabla_detail' guardia.guardia.escalacion.empresa.id  %}">aquí</a>.<br>
+
+              </p>
+            {% endfor %}
+        </div>
+    </div>
+ </div>
+{% endblock %}

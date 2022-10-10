@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/*----------------------------------------
+SOBREESCRIBIENDO  LOS ESTILOS DE BOOTSTRAP
+------------------------------------------*/
+body{
+    background-color: #E5EFEF !important; }
+
+
+
+.bg-secondary {
+  background-color: #232d4b !important; }
+
+.text-secondary {
+  color: #232d4b !important; }
+
+.btn-primary, .btn-secondary {
+  background-color: #232d4b !important;
+  border-color: #303A6B !important; }
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #32698A !important; }
+
+.btn-primary:active {
+  background-color: #b51d00 !important;
+  border-color: #821500 !important; }
+
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 64, 28, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(255, 64, 28, 0.5) !important; }
+
+.btn-outline-primary{
+    color:white !important;
+     background-color:#232d4b !important;
+}
+
+
+.btn-outline-primary:hover {
+  background-color: #1C48AD !important;
+
+}
+
+.card-header  {
+  background-color: #1F618D; !important;
+  color:white;
+
+}
+
+.card-header-tabs :hover{
+    color:white;
+}
+
+.categories{
+     color:white;
+
+}
+
+.card{
+    background: linear-gradient(#1F618D, #A9CCE3) !important;
+    boder-border-radius:20px  !important;
+    color:white;
+}
+
+.btn-outline-secondary {
+    color:white !important;
+     background-color:#232d4b !important;
+}
+
+.btn-outline-secondary:hover{
+    background-color:#1C48AD !important;
+
+}
+/*--------------------------
+ESTILOS DEL DISEÑO
+---------------------------*/
+html {
+  font-size: 13px; }
+
+body {
+  color: #44484a;
+  font-family: 'Open Sans', sans-serif; }
+
+.card:hover {
+  -webkit-box-shadow: 0 0 10px #0c0c0c3b;
+          box-shadow: 0 0 10px #0c0c0c3b; }
+
+
+
+.btn-group-lg:hover{
+    background-color:white     !important;
+
+}
+/*------------------------
+SHOW DE LOS MEDIAS QUERIES
+------------------------*/
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% block title %}Tablas{% endblock %}
+{% load static %}
+{% load thumbnail %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h6 class="mt-4"><a href="javascript:history.back()" class="text-muted">
+                       <i class="bi bi-backspace-fill"></i> Regresar
+               </a>
+                </h6>
+
+                {% for guardia in object_list %}
+
+
+                 <h5 class=" font-weight-bold text-center">{{guardia.empresa.name}}</h5>
+
+
+                <div class="text-center">
+                 <img src="{% thumbnail guardia.imagen 800x0  quality=100 %}" class="img-fluid" alt="...">
+                     </div>
+                 {% if guardia.excel %}
+                    <a href="{{ guardia.excel.url }}" download  class="btn btn-outline-secondary btn-lg btn-block mt-2" >Download</a>
+                 {% endif %}
+
+                {% if guardia.comentario %}
+
+
+                   <p class="font-weight-bold mt-3">{{guardia.comentario}}</p>
+                 {% endif %}
+
+                {% endfor  %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% block title %}Editar Guardia{% endblock %}
+{% load static %}
+
+
+{% block content %}
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto mb-5">
+        <form id = "formulario" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+          <div class="row">
+
+            <!-- Formulario -->
+            <div class="col-md-10">
+              <h3 class="text-center">Editar guardia {{request.user}}</h3>
+              {% if 'ok' in request.GET %}
+                <p style="color:green;">
+                  Guardia editada correctamente correctamente...
+                  <a style="color:black;" href="{% url 'core:guardias_especialistas_list' %}">Haz clic aquí para ver el resultado</a>.
+                </p>
+              {% endif %}
+
+              <input type="text" value="{{request.user.get_user.id}}" name="guardia" id="id_guardia" class="form-control mt-3" hidden>
+
+
+               {{form.imagen}}
+
+              {{form.fecha_inicio}}
+              {{form.fecha_fin}}
+                {{ form.comentario }}
+
+
+              <input type="submit" class="btn btn-primary btn-block mt-3" value="Actualizar">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
